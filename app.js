@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const Registration = require("./models/regForm.js");
-// const dotevn = require("dotenv");
-// dotevn.config();
+const dotevn = require("dotenv");
+dotevn.config();
 
 app.use(express.urlencoded({extended: true}));      // To encode the data that comes from the form....
 
@@ -16,7 +16,7 @@ main()
 .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/registrationForm');
+  await mongoose.connect(process.env.CONNECTION_DB);
 
 };
 
