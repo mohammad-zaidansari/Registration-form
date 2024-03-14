@@ -13,7 +13,6 @@ This is a simple web application that allows users to register by filling out a 
 
 - HTML
 - CSS
-- JavaScript
 - Node.js
 - Express.js
 - MongoDB
@@ -31,6 +30,3 @@ Before running this project locally, you need to have the following installed:
 
    ```bash
    git clone https://github.com/mohammad-zaidansari/Registration-form.git
-
-2. Explore 👇
-###  https://mohammad-zaidansari.github.io/Registration-form/
