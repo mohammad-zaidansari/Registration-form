@@ -1,4 +1,4 @@
-.evn 
+.env 
 node_modules
 packeg-lock.json
 packeg.json
