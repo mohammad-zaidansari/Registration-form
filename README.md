@@ -30,3 +30,6 @@ Before running this project locally, you need to have the following installed:
 
    ```bash
    git clone https://github.com/mohammad-zaidansari/Registration-form.git
+
+## Explore the website 👇
+https://registration-form-1hl3.onrender.com
