@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const Registration = require("./models/regForm.js");
 const dotevn = require("dotenv");
+const bodyParser = require("body-parser");
 
 
 dotevn.config();
@@ -21,6 +21,17 @@ const connectDB = async () => {
     }
 }
 connectDB();   //start DB 
+
+const registrationschema = new mongoose.Schema({
+    name : String,
+    email : String,
+    password : String,
+});
+
+const Registration = mongoose.model("Registration",registrationschema );
+app.use(bodyParser.urlencoded({ extended : true}));
+app.use((bodyParser.json()));
+
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/pages/index.html");
