@@ -16,12 +16,18 @@
     <style>
       /* Apply glassmorphism effect to the container */
       .container {
-        background: rgba(255, 255, 255, 0.655); /* Set a semi-transparent white background */
-        backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-        border-radius:15px; /* Rounded corners */
-        padding: 30px;
+        margin-top: 100px;
+        width: 450px;
+        margin: 100px auto;
         text-align: center;
+        position: absolute;
+        background: #212121;
+        border-radius: 20px;
+        backdrop-filter: blur(30px);
+        box-shadow: 15px 15px 30px rgb(25, 25, 25),
+          -15px -15px 30px rgb(60, 60, 60);
       }
+   
 
       /* Center the container vertically and horizontally */
       body {
@@ -29,7 +35,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh; /* Ensure full viewport height */
-        background-color: rgb(188, 188, 188);
+        background-color: #212121;
       }
       h1{
         color: red;
@@ -37,7 +43,7 @@
     </style>
     <div class="container">
       <h1>Registration Error</h1>
-      <p>There was an error during registration. Please try again.</p>
+      <p style="color: whitesmoke;">There was an error during registration. Please try again.</p>
     </div>
   </body>
 </html>

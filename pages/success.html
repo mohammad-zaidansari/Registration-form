@@ -14,14 +14,19 @@
   <body
   >
     <style>
-      /* Apply glassmorphism effect to the container */
-      .container {
-        background: rgba(255, 255, 255, 0.823); /* Set a semi-transparent white background */
-        backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-        border-radius:15px; /* Rounded corners */
-        padding: 30px;
+            .container {
+        margin-top: 100px;
+        width: 450px;
+        margin: 100px auto;
         text-align: center;
+        border-radius: 20px;
+        position: absolute;
+        background: #212121;
+        backdrop-filter: blur(30px);
+        box-shadow: 15px 15px 30px rgb(25, 25, 25),
+          -15px -15px 30px rgb(60, 60, 60);
       }
+   
 
       /* Center the container vertically and horizontally */
       body {
@@ -29,7 +34,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh; /* Ensure full viewport height */
-        background-color: rgb(233, 233, 233);
+        background-color: #212121;
       }
       h1{
         color: green;
@@ -37,7 +42,7 @@
     </style>
     <div class="container">
       <h1>Registration Successful</h1>
-      <p>Thank you for registering.</p>
+      <p style="color: whitesmoke;">Thank you for registering.</p>
     </div>
   </body>
 </html>
