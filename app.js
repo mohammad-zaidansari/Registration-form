@@ -41,8 +41,9 @@ app.post("/register", async (req, res) => {
     try{
         const{ name, email, password } = req.body;
 
-        const exitingUser = await Registration.findOne({email : email});
-        if(!exitingUser){
+        const exitingemail = await Registration.findOne({email : email});
+        const exitinguser = await Registration.findOne({name : name});
+        if(!exitingemail && !exitinguser){
             const registrationData = new Registration({
                 name,
                 email,
