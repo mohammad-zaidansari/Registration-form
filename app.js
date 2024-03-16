@@ -3,29 +3,24 @@ const app = express();
 const mongoose = require("mongoose");
 const Registration = require("./models/regForm.js");
 const dotevn = require("dotenv");
-dotevn.config();
 
+
+dotevn.config();
 app.use(express.urlencoded({extended: true}));      // To encode the data that comes from the form....
 
-// const connectDb = process.env.CONNECTION_DB;
 
-main()
-.then(() => {
-    console.log("DB connection successfully");
-})
-.catch((err) => console.log(err));
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD
 
-async function main() {
-  await mongoose.connect(process.env.CONNECTION_DB);
-
-};
-
-// let reg1 = new Registration({
-//     name: "zaid",
-//     email: "zaid@gmail.com",
-//     password: "123"
-// });
-// reg1.save().then(res => {console.log(res)});
+const connectDB = async () => {
+    try{
+        await mongoose.connect(`mongodb+srv://${username}:${password}@registration-form.tkp4ji0.mongodb.net/?retryWrites=true&w=majority&appName=registration-form`);
+        console.log("Connect to MongoDB successfully");
+    }catch (error) {
+        console.log("Connection failed" + error.message);
+    }
+}
+connectDB();   //start DB 
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/pages/index.html");
